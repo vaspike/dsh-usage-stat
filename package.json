@@ -1,0 +1,48 @@
+{
+  "name": "dsh-usage-stat",
+  "version": "0.1.0",
+  "description": "Token usage statistics for DeepSeek Harness: requests, input/output/total tokens, cache hit rate, and TPS per provider/model route, with a GitHub-style usage heatmap and time/provider/model/session filters.",
+  "keywords": ["dsh", "dsh-plugin", "deepseek-harness", "token", "usage", "statistics", "heatmap", "llm"],
+  "license": "MIT",
+  "author": "vaspike",
+  "homepage": "https://github.com/vaspike/dsh-usage-stat#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vaspike/dsh-usage-stat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vaspike/dsh-usage-stat/issues"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "ledger.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "tests"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  }
+}

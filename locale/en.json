@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Usage Stat",
+    "description": "Token usage statistics for DeepSeek Harness: requests, input/output/total tokens, cache hit rate, and TPS per provider/model route. GitHub-style usage heatmap with 90/180/365-day windows, time-range (incl. custom), provider, model, and session filters. Adds a Usage Stat panel to the left sidebar."
+  }
+}
