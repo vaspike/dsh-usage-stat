@@ -28,8 +28,10 @@
     "locale/*.json",
     "icon.svg",
     "README.md",
+    "README.zh.md",
     "LICENSE",
-    "tests"
+    "tests",
+    "docs"
   ],
   "engines": {
     "node": ">=20"
